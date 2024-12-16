@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwk7jp4chc6ay"]
+[gd_scene load_steps=5 format=3 uid="uid://cwk7jp4chc6ay"]
+
+[ext_resource type="Texture2D" uid="uid://uopvajow55q6" path="res://icon.svg" id="1_2poea"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6igg"]
 albedo_color = Color(0.0476814, 0.333584, 9.62615e-08, 1)
@@ -6,7 +8,16 @@ albedo_color = Color(0.0476814, 0.333584, 9.62615e-08, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_4vukp"]
 material = SubResource("StandardMaterial3D_e6igg")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7hyl"]
+albedo_texture = ExtResource("1_2poea")
+
 [node name="Game" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_4vukp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 1, -1)
+material_override = SubResource("StandardMaterial3D_y7hyl")
+mesh = SubResource("PlaneMesh_4vukp")
+skeleton = NodePath("../MeshInstance3D")
