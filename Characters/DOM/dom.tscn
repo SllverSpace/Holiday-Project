@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dofi8fst4l0pw"]
+
+[ext_resource type="Script" path="res://Characters/DOM/dom.gd" id="1_71oej"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e2yrg"]
+
+[node name="DOM" type="CharacterBody3D"]
+script = ExtResource("1_71oej")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_e2yrg")
