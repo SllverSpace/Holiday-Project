@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwk7jp4chc6ay"]
+[gd_scene load_steps=11 format=3 uid="uid://cwk7jp4chc6ay"]
 
 [ext_resource type="Texture2D" uid="uid://uopvajow55q6" path="res://icon.svg" id="1_2poea"]
 [ext_resource type="PackedScene" uid="uid://v5wfvikf166w" path="res://player.tscn" id="2_t06um"]
+[ext_resource type="PackedScene" uid="uid://dofi8fst4l0pw" path="res://Characters/DOM/dom.tscn" id="3_qrh5c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7hyl"]
 albedo_texture = ExtResource("1_2poea")
@@ -51,3 +52,6 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 shape = SubResource("BoxShape3D_71f4k")
+
+[node name="DOM" parent="." instance=ExtResource("3_qrh5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52852, 2.5662, -3.68834)
