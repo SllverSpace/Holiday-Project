@@ -3,7 +3,17 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+const SENSATIVITY = 0.003
 
+@onready var head = $Head
+@onready var camera = $Head/Camera
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		head.rotate_y(-event.relative.x * SENSATIVITY)
+		camera.rotate_x(-event.relative.y * SENSATIVITY)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
