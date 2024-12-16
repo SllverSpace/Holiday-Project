@@ -13,11 +13,11 @@ albedo_texture = ExtResource("1_2poea")
 
 [node name="Game" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_4vukp")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="godot guy" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 1, -1)
 material_override = SubResource("StandardMaterial3D_y7hyl")
 mesh = SubResource("PlaneMesh_4vukp")
-skeleton = NodePath("../MeshInstance3D")
+skeleton = NodePath("../floor")
